@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@types/cors", "npm:2.8.10"],
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
             ["@xmcl/client", "npm:2.0.6"],
@@ -102,6 +103,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/connect", "npm:3.4.34"],
             ["@types/node", "npm:14.14.31"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/cors", [
+        ["npm:2.8.10", {
+          "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.10-53b686e0da-c3f3d6feee.zip/node_modules/@types/cors/",
+          "packageDependencies": [
+            ["@types/cors", "npm:2.8.10"]
           ],
           "linkType": "HARD",
         }]
@@ -1562,6 +1572,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["launcher-backend", "workspace:."],
+            ["@types/cors", "npm:2.8.10"],
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
             ["@xmcl/client", "npm:2.0.6"],
