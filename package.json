@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "tsc . && node ."
+    "start": "tsc && node ."
   },
   "dependencies": {
     "@octokit/rest": "^18.2.0",

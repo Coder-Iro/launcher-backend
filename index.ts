@@ -8,11 +8,16 @@ const app = express();
 app.use(cors())
 
 app.get('/', async (_,res) => {
-    let modpacks = await octokit.repos.listForOrg({
-        org: "MRS-modpacks",
-        type: "public"
-    })
-    res.send(modpacks);
+    try {
+        let modpacks = (await octokit.repos.listForOrg({
+            org: "MRS-modpack",
+            type: "public"
+        })).data.map(x => x.full_name)
+
+        res.send(modpacks);
+    } catch (e) {
+        console.log(e);
+    }
 })
 
-app.listen(5000, '127.0.0.1')
+app.listen(5000, '127.0.0.1', () => console.log("Server Started on 127.0.0.1:5000"))
