@@ -1,12 +1,16 @@
 {
   "name": "launcher-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/Coder-Iro/launcher-backend",
   "author": "Coder-Iro <coder-iro@teamif.io>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "tsc . && node ."
+  },
   "dependencies": {
+    "@octokit/rest": "^18.2.0",
     "@xmcl/client": "^2.0.6",
     "@xmcl/core": "^2.6.0",
     "@xmcl/installer": "^3.1.1",
