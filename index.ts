@@ -12,8 +12,10 @@ app.get('/', async (_,res) => {
         let modpacks = (await octokit.repos.listForOrg({
             org: "MRS-modpack",
             type: "public"
-        })).data.map(x => x.full_name)
-
+        })).data.map(x => x.name).map((element) => {
+            
+        })
+        
         res.send(modpacks);
     } catch (e) {
         console.log(e);
