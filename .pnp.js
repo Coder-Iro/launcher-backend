@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.10"],
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
+            ["@types/source-map-support", "npm:0.5.3"],
             ["@xmcl/client", "npm:2.0.6"],
             ["@xmcl/core", "npm:2.6.0"],
             ["@xmcl/installer", "npm:3.1.1"],
@@ -50,6 +51,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
             ["isomorphic-git", "npm:1.8.1"],
+            ["source-map-support", "npm:0.5.19"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
           ],
           "linkType": "SOFT",
@@ -336,6 +338,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/source-map-support", [
+        ["npm:0.5.3", {
+          "packageLocation": "./.yarn/cache/@types-source-map-support-npm-0.5.3-e889b6a035-b91a22010f.zip/node_modules/@types/source-map-support/",
+          "packageDependencies": [
+            ["@types/source-map-support", "npm:0.5.3"],
+            ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@xmcl/asm", [
         ["npm:0.1.1", {
           "packageLocation": "./.yarn/cache/@xmcl-asm-npm-0.1.1-59dfbbb245-25906a6130.zip/node_modules/@xmcl/asm/",
@@ -550,6 +562,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/buffer-crc32-npm-0.2.13-c4b6fceac1-0340e848d6.zip/node_modules/buffer-crc32/",
           "packageDependencies": [
             ["buffer-crc32", "npm:0.2.13"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["buffer-from", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/buffer-from-npm-1.1.1-22917b8ed8-540ceb79c4.zip/node_modules/buffer-from/",
+          "packageDependencies": [
+            ["buffer-from", "npm:1.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1013,6 +1034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/cors", "npm:2.8.10"],
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
+            ["@types/source-map-support", "npm:0.5.3"],
             ["@xmcl/client", "npm:2.0.6"],
             ["@xmcl/core", "npm:2.6.0"],
             ["@xmcl/installer", "npm:3.1.1"],
@@ -1022,6 +1044,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
             ["isomorphic-git", "npm:1.8.1"],
+            ["source-map-support", "npm:0.5.19"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
           ],
           "linkType": "SOFT",
@@ -1397,6 +1420,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["decompress-response", "npm:4.2.1"],
             ["once", "npm:1.4.0"],
             ["simple-concat", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["source-map", [
+        ["npm:0.6.1", {
+          "packageLocation": "./.yarn/cache/source-map-npm-0.6.1-1a3621db16-8647829a06.zip/node_modules/source-map/",
+          "packageDependencies": [
+            ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["source-map-support", [
+        ["npm:0.5.19", {
+          "packageLocation": "./.yarn/cache/source-map-support-npm-0.5.19-65b33ae61e-59d4efaae9.zip/node_modules/source-map-support/",
+          "packageDependencies": [
+            ["source-map-support", "npm:0.5.19"],
+            ["buffer-from", "npm:1.1.1"],
+            ["source-map", "npm:0.6.1"]
           ],
           "linkType": "HARD",
         }]
