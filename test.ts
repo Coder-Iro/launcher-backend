@@ -4,7 +4,7 @@ import * as fs from "fs"
 import * as path from "path"
 import http from "isomorphic-git/http/node"
 import axios from "axios"
-import {getVersionList, install, installForge} from "@xmcl/installer";
+import {getVersionList, install, installDependencies, installForge} from "@xmcl/installer";
 import {launch} from "@xmcl/core";
 import {offline} from "@xmcl/user";
 import {findJavaHomePromise} from "./findjava";
@@ -25,7 +25,8 @@ import {findJavaHomePromise} from "./findjava";
     try {
         const java = await findJavaHomePromise({allowJre: true})
         console.log("Start Installing Minecraft.")
-        await install(mcver, dir)
+        const mc = await install(mcver, dir)
+        await installDependencies(mc)
         console.log("Start Installing Forge.")
         const forge = await installForge({
             version: resp.version.forge,
