@@ -26,7 +26,6 @@ import {findJavaHomePromise} from "./findjava";
         const java = await findJavaHomePromise({allowJre: true})
         console.log("Start Installing Minecraft.")
         const mc = await install(mcver, dir)
-        await installDependencies(mc)
         console.log("Start Installing Forge.")
         const forge = await installForge({
             version: resp.version.forge,
