@@ -50,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.21.1"],
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
+            ["find-java-home", "npm:1.1.0"],
             ["isomorphic-git", "npm:1.8.1"],
             ["source-map-support", "npm:0.5.19"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
@@ -867,6 +868,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["find-java-home", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/find-java-home-npm-1.1.0-661de85a57-72da2f6416.zip/node_modules/find-java-home/",
+          "packageDependencies": [
+            ["find-java-home", "npm:1.1.0"],
+            ["which", "npm:1.0.9"],
+            ["winreg", "npm:1.2.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["follow-redirects", [
         ["npm:1.13.2", {
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.13.2-3e8d07a85b-76a23a75e5.zip/node_modules/follow-redirects/",
@@ -1043,6 +1055,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.21.1"],
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
+            ["find-java-home", "npm:1.1.0"],
             ["isomorphic-git", "npm:1.8.1"],
             ["source-map-support", "npm:0.5.19"],
             ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
@@ -1542,6 +1555,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/vary-npm-1.1.2-b49f70ae63-591f059f72.zip/node_modules/vary/",
           "packageDependencies": [
             ["vary", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["which", [
+        ["npm:1.0.9", {
+          "packageLocation": "./.yarn/cache/which-npm-1.0.9-2ae46b386d-724fe09459.zip/node_modules/which/",
+          "packageDependencies": [
+            ["which", "npm:1.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["winreg", [
+        ["npm:1.2.4", {
+          "packageLocation": "./.yarn/cache/winreg-npm-1.2.4-f5fd9c1abf-29c9c49fc2.zip/node_modules/winreg/",
+          "packageDependencies": [
+            ["winreg", "npm:1.2.4"]
           ],
           "linkType": "HARD",
         }]

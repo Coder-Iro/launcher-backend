@@ -23,7 +23,28 @@ import {getVersionList, install, installForge} from "@xmcl/installer";
         console.log("Start Installing Minecraft.")
         await install(mcver, dir)
         console.log("Start Installing Forge.")
-        await installForge(resp.version.forge, dir)
+        const forge = await installForge({
+            version: resp.version.forge,
+            mcversion: resp.version.minecraft
+        }, dir)
+        /*const credential = offline("Test")
+        const process = await launch({
+            accessToken: credential.accessToken,
+            gamePath :dir,
+            javaPath: "",
+            version: forge,
+            gameProfile: credential.selectedProfile,
+        });
+        // @ts-ignore
+        process.stdout.on('data', (b) => {
+            // print mc output
+            console.log(b.toString());
+        });
+        // @ts-ignore
+        process.stderr.on('data', (b) => {
+            // print mc err output
+            console.log(b.toString());
+        });*/
     } catch (e) {
         console.log(e)
     }
