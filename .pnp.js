@@ -42,6 +42,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
             ["@types/source-map-support", "npm:0.5.3"],
+            ["@types/which", "npm:2.0.0"],
+            ["@types/winreg", "npm:1.2.30"],
             ["@xmcl/client", "npm:2.0.6"],
             ["@xmcl/core", "npm:2.6.0"],
             ["@xmcl/installer", "npm:3.1.1"],
@@ -50,10 +52,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.21.1"],
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
-            ["find-java-home", "npm:1.1.0"],
             ["isomorphic-git", "npm:1.8.1"],
             ["source-map-support", "npm:0.5.19"],
-            ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
+            ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"],
+            ["which", "npm:2.0.2"],
+            ["winreg", "npm:1.2.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -345,6 +348,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/source-map-support", "npm:0.5.3"],
             ["source-map", "npm:0.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/which", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@types-which-npm-2.0.0-725a55e4c8-c479c56840.zip/node_modules/@types/which/",
+          "packageDependencies": [
+            ["@types/which", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/winreg", [
+        ["npm:1.2.30", {
+          "packageLocation": "./.yarn/cache/@types-winreg-npm-1.2.30-3b994e9df3-7903bba811.zip/node_modules/@types/winreg/",
+          "packageDependencies": [
+            ["@types/winreg", "npm:1.2.30"]
           ],
           "linkType": "HARD",
         }]
@@ -868,17 +889,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["find-java-home", [
-        ["npm:1.1.0", {
-          "packageLocation": "./.yarn/cache/find-java-home-npm-1.1.0-661de85a57-72da2f6416.zip/node_modules/find-java-home/",
-          "packageDependencies": [
-            ["find-java-home", "npm:1.1.0"],
-            ["which", "npm:1.0.9"],
-            ["winreg", "npm:1.2.4"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["follow-redirects", [
         ["npm:1.13.2", {
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.13.2-3e8d07a85b-76a23a75e5.zip/node_modules/follow-redirects/",
@@ -1017,6 +1027,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["isexe", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/isexe-npm-2.0.0-b58870bd2e-7b437980bb.zip/node_modules/isexe/",
+          "packageDependencies": [
+            ["isexe", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["isomorphic-git", [
         ["npm:1.8.1", {
           "packageLocation": "./.yarn/cache/isomorphic-git-npm-1.8.1-f2d376bfa8-8db81e5fb4.zip/node_modules/isomorphic-git/",
@@ -1047,6 +1066,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.11"],
             ["@types/node", "npm:14.14.31"],
             ["@types/source-map-support", "npm:0.5.3"],
+            ["@types/which", "npm:2.0.0"],
+            ["@types/winreg", "npm:1.2.30"],
             ["@xmcl/client", "npm:2.0.6"],
             ["@xmcl/core", "npm:2.6.0"],
             ["@xmcl/installer", "npm:3.1.1"],
@@ -1055,10 +1076,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.21.1"],
             ["cors", "npm:2.8.5"],
             ["express", "npm:4.17.1"],
-            ["find-java-home", "npm:1.1.0"],
             ["isomorphic-git", "npm:1.8.1"],
             ["source-map-support", "npm:0.5.19"],
-            ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"]
+            ["typescript", "patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"],
+            ["which", "npm:2.0.2"],
+            ["winreg", "npm:1.2.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -1560,10 +1582,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["which", [
-        ["npm:1.0.9", {
-          "packageLocation": "./.yarn/cache/which-npm-1.0.9-2ae46b386d-724fe09459.zip/node_modules/which/",
+        ["npm:2.0.2", {
+          "packageLocation": "./.yarn/cache/which-npm-2.0.2-320ddf72f7-ea9b1db126.zip/node_modules/which/",
           "packageDependencies": [
-            ["which", "npm:1.0.9"]
+            ["which", "npm:2.0.2"],
+            ["isexe", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]

@@ -233,6 +233,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/which@npm:^2":
+  version: 2.0.0
+  resolution: "@types/which@npm:2.0.0"
+  checksum: c479c56840abbf7e949b25c7587f2876825ce4f3f847e794b27a8f6b35ab433e0e226d493b1f2c3261f6d876b6965e3461795fb9d85bd0ffcaab3b4f17c92f79
+  languageName: node
+  linkType: hard
+
+"@types/winreg@npm:^1":
+  version: 1.2.30
+  resolution: "@types/winreg@npm:1.2.30"
+  checksum: 7903bba811a33ee4b401c754fe3b06b139f02132a09513ab092631269fcf576655b532f19cfb9546fd464c5f0b9d469a5e4211cdddce9b51e82e683992be72ea
+  languageName: node
+  linkType: hard
+
 "@xmcl/asm@npm:^0.1.0":
   version: 0.1.1
   resolution: "@xmcl/asm@npm:0.1.1"
@@ -660,16 +674,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-java-home@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "find-java-home@npm:1.1.0"
-  dependencies:
-    which: ~1.0.5
-    winreg: ~1.2.2
-  checksum: 72da2f6416b930533672e3753c60c5364823f696e83201aceaf1562e6cb56f3f2513d5f88b754313f23c426b8058ab6e354c050597d0ed5cb93ef919371442f7
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.10.0":
   version: 1.13.2
   resolution: "follow-redirects@npm:1.13.2"
@@ -784,6 +788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"isexe@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "isexe@npm:2.0.0"
+  checksum: 7b437980bb77881a146fba85cfbdf01edc2b148673e9c2722a1e49661fea73adf524430a80fdbfb8ce9f60d43224e682c657c45030482bd39e0c488fc29b4afe
+  languageName: node
+  linkType: hard
+
 "isomorphic-git@npm:^1.8.1":
   version: 1.8.1
   resolution: "isomorphic-git@npm:1.8.1"
@@ -814,6 +825,8 @@ __metadata:
     "@types/express": ^4.17.11
     "@types/node": ^14.14.31
     "@types/source-map-support": ^0
+    "@types/which": ^2
+    "@types/winreg": ^1
     "@xmcl/client": ^2.0.6
     "@xmcl/core": ^2.6.0
     "@xmcl/installer": ^3.1.1
@@ -822,10 +835,11 @@ __metadata:
     axios: ^0.21.1
     cors: ^2.8.5
     express: ^4.17.1
-    find-java-home: ^1.1.0
     isomorphic-git: ^1.8.1
     source-map-support: ^0.5.19
     typescript: ^4.1.5
+    which: ^2.0.2
+    winreg: ^1.2.4
   languageName: unknown
   linkType: soft
 
@@ -1263,16 +1277,18 @@ typescript@^4.1.5:
   languageName: node
   linkType: hard
 
-"which@npm:~1.0.5":
-  version: 1.0.9
-  resolution: "which@npm:1.0.9"
+"which@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "which@npm:2.0.2"
+  dependencies:
+    isexe: ^2.0.0
   bin:
-    which: ./bin/which
-  checksum: 724fe09459869175a0c26dfd0eafaad87c03431eb593dabce15e9f0efa3c0996cdbc90edb932d7bfb7a53cc31098cf6cf64be9820b049d40bd13bb772877f4e7
+    node-which: ./bin/node-which
+  checksum: ea9b1db1266b08f7880717cf70dd9012dd523e5a317f10fbe4d5e8c1a761c5fd237f88642f2ba33b23f973ff4002c9b26648d63084ab208d8ecef36497315f6e
   languageName: node
   linkType: hard
 
-"winreg@npm:~1.2.2":
+"winreg@npm:^1.2.4":
   version: 1.2.4
   resolution: "winreg@npm:1.2.4"
   checksum: 29c9c49fc2985f8eadfe83bf2575f47eca6225154bdea23cbb94565f4b8ec7d3a4a9247a1baf855e7dedd7d1f5608773514114665d781a99026d4a9b866d1fdf
