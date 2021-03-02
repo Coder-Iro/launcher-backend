@@ -5,7 +5,7 @@ import * as path from "path"
 import http from "isomorphic-git/http/node"
 import axios from "axios"
 import {getVersionList, install, installDependencies, installForge} from "@xmcl/installer";
-import {launch, Version} from "@xmcl/core";
+import {launch} from "@xmcl/core";
 import {offline} from "@xmcl/user";
 import {findJavaHomePromise} from "./findjava";
 
@@ -31,7 +31,7 @@ import {findJavaHomePromise} from "./findjava";
             version: resp.version.forge,
             mcversion: resp.version.minecraft
         }, dir)
-        await installDependencies(await Version.parse(dir, forge))
+        await installDependencies(mc)
         if (java !== null) {
             const credential = offline("Test")
             const process = await launch({
