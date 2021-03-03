@@ -32,7 +32,7 @@ import {findJavaHomePromise} from "./findjava";
             mcversion: resp.version.minecraft
         }, dir)
         await installDependencies(mc)
-        await installDependencies(Version.parse({minecraftPath:dir, version:forge}))
+        await installDependencies(await Version.parse({minecraftPath:dir, version:forge}))
         if (java !== null) {
             const credential = offline("Test")
             const process = await launch({
