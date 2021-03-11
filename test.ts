@@ -5,7 +5,7 @@ import * as path from "path"
 import http from "isomorphic-git/http/node"
 import axios from "axios"
 import {getVersionList, install, installDependencies, installForge} from "@xmcl/installer";
-import {Version, launch} from "@xmcl/core";
+import {launch, Version} from "@xmcl/core";
 import {offline} from "@xmcl/user";
 import {findJavaHomePromise} from "./findjava";
 
@@ -35,10 +35,10 @@ import {findJavaHomePromise} from "./findjava";
         await installDependencies(await Version.parse(dir, forge))
         if (java !== null) {
             const credential = offline("Test")
-            const process = await launch({
+            const proc = await launch({
                 accessToken: credential.accessToken,
                 gamePath: dir,
-                javaPath: path.join(java, "bin"),
+                javaPath: path.join(java, "bin", process.platform === "win32" ? "java.exe" : "java"),
                 version: forge,
                 minMemory: 7168,
                 maxMemory: 7168,
@@ -46,12 +46,12 @@ import {findJavaHomePromise} from "./findjava";
                 extraExecOption: {detached: true}
             });
             // @ts-ignore
-            process.stdout.on('data', (b) => {
+            proc.stdout.on('data', (b) => {
                 // print mc output
                 console.log(b.toString());
             });
             // @ts-ignore
-            process.stderr.on('data', (b) => {
+            proc.stderr.on('data', (b) => {
                 // print mc err output
                 console.log(b.toString());
             });
